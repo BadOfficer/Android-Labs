@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Labs</string>
+    <string name="warning_message">Please enter all values</string>
+    <string name="field_header">Enter information:</string>
+    <string name="field_placeholder">Enter your some info</string>
+    <string name="radio_header">Select type:</string>
+    <string name="first_type">Oswald</string>
+    <string name="second_type">Roboto</string>
+    <string name="third_type">Monomakh</string>
+    <string name="cancel_btn">Clear</string>
+    <string name="submit_btn">Submit</string>
+    <string name="result_header">Result:</string>
+</resources>

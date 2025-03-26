@@ -1,13 +1,35 @@
 <resources>
     <string name="app_name">Labs</string>
-    <string name="warning_message">Please enter all values</string>
+    <!-- FORM -->
     <string name="field_header">Enter information:</string>
     <string name="field_placeholder">Enter your some info</string>
     <string name="radio_header">Select type:</string>
     <string name="first_type">Oswald</string>
     <string name="second_type">Roboto</string>
     <string name="third_type">Monomakh</string>
-    <string name="cancel_btn">Clear</string>
-    <string name="submit_btn">Submit</string>
+    <string name="clear_btn">Clear</string>
+    <string name="submit_btn">Save</string>
+    <string name="show_result_btn">Show Result</string>
+
+    <!-- RESULT -->
     <string name="result_header">Result:</string>
+    <string name="show_records_btn">Show all records</string>
+    <string name="close_result_btn">Close</string>
+
+    <!-- MESSAGES -->
+    <string name="warning_message">Please enter all values</string>
+    <string name="record_added_successful_message">Your selection successfully saved</string>
+    <string name="record_saving_failed_message">Selection saving failed</string>
+    <string name="records_deleted_successful_message">All records deleted successfully</string>
+    <string name="record_deleted_successful_message">Record deleted successfully</string>
+
+    <!--RESULT TABLE -->
+    <string name="db_records_header">All Records</string>
+    <string name="db_records_delete_btn">Delete All</string>
+    <string name="back_btn">Go Back</string>
+    <string name="table_empty_message">Table is empty</string>
+    <string name="table_text_column_header">Entered text</string>
+    <string name="table_font_column_header">Selected font</string>
+    <string name="table_actions_column_header">Actions</string>
+    <string name="try_result_btn">Try</string>
 </resources>

@@ -6,85 +6,109 @@
     android:layout_height="match_parent"
     tools:context=".fragment.FormFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/field_header"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:textAlignment="center">
 
-        <EditText
-            android:id="@+id/entryField"
-            android:layout_width="316dp"
-            android:layout_height="146dp"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:hint="@string/field_placeholder"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/radio_header"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/entryField" />
-
-        <RadioGroup
-            android:id="@+id/textFonts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2">
-
-            <RadioButton
-                android:id="@+id/oswald"
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/first_type" />
+                android:layout_marginTop="20dp"
+                android:text="@string/field_header"
+                android:textAlignment="center"
+                android:textSize="24sp" />
 
-            <RadioButton
-                android:id="@+id/roboto"
+            <EditText
+                android:id="@+id/entryField"
+                android:layout_width="match_parent"
+                android:layout_height="146dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/field_placeholder"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/second_type" />
+                android:layout_marginTop="20dp"
+                android:text="@string/radio_header"
+                android:textAlignment="center"
+                android:textSize="24sp" />
 
-            <RadioButton
-                android:id="@+id/monomakh"
-                android:layout_width="319dp"
+            <RadioGroup
+                android:id="@+id/textFonts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/oswald"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first_type" />
+
+                <RadioButton
+                    android:id="@+id/roboto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/second_type" />
+
+                <RadioButton
+                    android:id="@+id/monomakh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/third_type" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/third_type" />
-        </RadioGroup>
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="20dp">
 
-        <Button
-            android:id="@+id/submitBtn"
-            android:layout_width="316dp"
-            android:layout_height="54dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/submit_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textFonts" />
+                <Button
+                    android:id="@+id/saveBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/submit_btn" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:id="@+id/clearBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/clear_btn" />
+            </LinearLayout>
 
+            <Button
+                android:id="@+id/showResultBtn"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/show_result_btn" />
+
+            <Button
+                android:id="@+id/showRecordsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/show_records_btn" />
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

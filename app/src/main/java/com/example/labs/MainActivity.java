@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.labs.fragment.FormFragment;
 import com.example.labs.fragment.ResultFragment;
 
-public class MainActivity extends AppCompatActivity implements FormFragment.OnClearInputListener{
+public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,14 +21,5 @@ public class MainActivity extends AppCompatActivity implements FormFragment.OnCl
         FormFragment formFragment = new FormFragment();
         fragmentTransaction.add(R.id.form_container, formFragment);
         fragmentTransaction.commit();
-    }
-
-    @Override
-    public void onClearInput() {
-        FormFragment formFragment = (FormFragment) getSupportFragmentManager().findFragmentById(R.id.form_container);
-
-        if(formFragment != null) {
-            formFragment.clearInputs();
-        }
     }
 }

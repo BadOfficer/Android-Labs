@@ -22,15 +22,16 @@ import com.example.labs.R;
 public class ResultFragment extends DialogFragment {
 
     private TextView result;
-    private Button clearButton;
-    private FormFragment.OnClearInputListener listener;
+    private Button closeButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_result, container, false);
         result = view.findViewById(R.id.result);
-        clearButton = view.findViewById(R.id.closeBtn);
+        closeButton = view.findViewById(R.id.closeBtn);
+
+        closeButton.setOnClickListener(v -> dismiss());
 
         Bundle args = getArguments();
         String entryText = args.getString(ENTRY_TEXT_ARG);
@@ -48,24 +49,6 @@ public class ResultFragment extends DialogFragment {
         result.setTypeface(typeface);
         result.setText(entryText);
 
-        clearButton.setOnClickListener(v -> {
-            if (listener != null) {
-                listener.onClearInput();
-            }
-            dismiss();
-        });
-
         return view;
-    }
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-
-        try {
-            listener = (FormFragment.OnClearInputListener) context;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(context + "must implement OnClearInputListener");
-        }
     }
 }
